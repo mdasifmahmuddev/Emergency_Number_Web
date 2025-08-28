@@ -52,7 +52,7 @@ document.addEventListener("click", function (e) {
 
       // create  div
       let entry = document.createElement("div");
-      entry.classList.add("flex", "justify-between", "mb-4");
+      entry.classList.add("flex", "justify-between","bg-[#FAFAFAFF]","p-2","rounded-lg","mb-4");
       entry.innerHTML = `
         <div>
           <h1>${serviceName}</h1>
@@ -61,6 +61,7 @@ document.addEventListener("click", function (e) {
         <div>${timeString}</div>
       `;
       historyAll.prepend(entry);
+      
 
       document.getElementById('coin_id').innerText = goldCoins;
 
