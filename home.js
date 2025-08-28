@@ -38,7 +38,7 @@ const clearButton = document.querySelector(".clear-history-btn");
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("call_button_class")) {
 
-    let card = e.target.parentNode.parentNode.parentNode;
+       let card = e.target.closest(".card_class");
 
     let serviceName = card.querySelector(".service-name").innerText;
     let serviceNumber = card.querySelector(".service_number").innerText;
