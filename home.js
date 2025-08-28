@@ -97,21 +97,27 @@ clearButton.addEventListener("click", function () {
 let copyCount = 0;
 
 document.addEventListener("click", function (e) {
-  if (e.target.closest("button") && e.target.closest("button").textContent.includes("Copy")) {
-    let card = e.target.closest(".m-3");  
+ if (e.target.closest(".copy_button_class")) {
+    // card parent element
+    let card = e.target.closest(".card_class");  
     let serviceNumber = card.querySelector(".service_number").innerText;
 
-     
     navigator.clipboard.writeText(serviceNumber).then(() => {
-      
       copyCount++;
-
-       
       document.getElementById("copy_id").innerText = copyCount;
-            alert(`নম্বর কপি হয়েছে: ${serviceNumber}`);
-
+      alert(`নম্বর কপি হয়েছে: ${serviceNumber}`);
     }).catch(err => {
       console.error("Copy failed", err);
     });
   }
+
+
+
+
+
+
+
+
+
+
 });
