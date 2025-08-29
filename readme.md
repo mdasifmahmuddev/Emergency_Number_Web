@@ -127,5 +127,13 @@ document.getElementById("taskList").addEventListener("click", function(e) {
 ```
 
 
+## 4.What is the difference between preventDefault() and stopPropagation() methods?
 
+- **preventDefault()** → Stops the default action of an element.
+
+**Example**: Clicking a link normally goes to another page. Using preventDefault() stops it.
+
+- **stopPropagation()** → Stops the event from bubbling up (or capturing down) the DOM.
+
+**Example**: Clicking a button inside a div won’t trigger the div’s click if you use stopPropagation().
 
